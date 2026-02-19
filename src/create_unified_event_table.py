@@ -63,7 +63,7 @@ import shutil
 # ──────────────────────────────────────────────────────
 # Paths
 # ──────────────────────────────────────────────────────
-PHYSIONET = Path("/mnt/s/Workfolder/Physionet")
+PHYSIONET = Path("***************")
 MIMIC_IV = PHYSIONET / "mimic-iv-3.1"
 MIMIC_CXR_META = PHYSIONET / "mimic-cxr-jpg-2.1" / "mimic-cxr-2.0.0-metadata.csv.gz"
 MIMIC_ECG = PHYSIONET / "mimic-iv-ecg-diagnostic-electrocardiogram-matched-subset-1.0"
@@ -71,7 +71,7 @@ MIMIC_ECHO = PHYSIONET / "mimic-iv-echo" / "0.1"
 MIMIC_ECHO_NOTE = PHYSIONET / "mimic-iv-echo-note"
 MIMIC_NOTE = PHYSIONET / "mimic-iv-note" / "2.2" / "note"
 
-OUTPUT_DIR = Path("/mnt/s/OneDrive/Project/multimodal_data_discordance/data")
+OUTPUT_DIR = Path("***************/multimodal_data_discordance/data")
 OUTPUT_ALL = OUTPUT_DIR / "unified_event_table.parquet"
 
 # ──────────────────────────────────────────────────────
