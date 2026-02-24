@@ -45,13 +45,25 @@ Structured modalities are aggregated at hourly resolution (median per item, then
 multimodal_data_discordance/
 ├── README.md
 ├── src/
-│   └── create_unified_event_table.py   # Main ETL script
+│   ├── create_unified_event_table.py   # Main ETL script
+│   └── query_examples.py              # Example queries for common tasks
 ├── data/
 │   └── unified_event_table.parquet     # Output (gitignored)
 └── doc/
     ├── mimic_data_mapping.xlsx         # Data mapping reference
     └── multimodal_discordance_v4_1.pptx
 ```
+
+### query_examples.py
+
+Runnable Python script with copy-paste-ready DuckDB queries for the unified event table. Covers:
+
+1. **Overview** — row/patient counts per modality
+2. **Patient timeline** — chronological multimodal events for a single patient
+3. **Value extraction** — UNNEST lab/vital LIST columns for specific items (e.g. creatinine, heart rate)
+4. **Cross-modal matching** — pair two modalities within a time window (closest pair or directional)
+5. **Condition-based cohort** — filter by ICD codes via MIMIC-IV diagnoses, extract selected modalities
+6. **Location filtering** — filter events by care location (ICU/Ward/ER)
 
 ## Data Sources
 
